@@ -3,7 +3,7 @@ import { addContact, deleteContact, setFilterStatus } from './actions';
 
 const savedContacts = JSON.parse(localStorage.getItem('contacts'));
 
-const contactsInitialState = savedContacts;
+const contactsInitialState = savedContacts || [];
 
 export const contactsReducer = createReducer(contactsInitialState, builder => {
   builder
